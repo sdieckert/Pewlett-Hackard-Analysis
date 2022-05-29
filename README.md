@@ -17,7 +17,7 @@ This assignment consists of two technical analysis deliverables and a written re
 
 ### Deliverable 1: The Number of Retiring Employees by Title
 
-1. Query to Create Retirement Titles for employees who are born between January 1, 1952 and December 31, 1955.
+#### 1. Query to Create Retirement Titles for employees who are born between January 1, 1952 and December 31, 1955.
 
 ```
 --Create a csv file of employees born from 1952-1955 and their titles
@@ -34,14 +34,14 @@ WHERE e.birth_date BETWEEN '1952-01-01' AND '1955-12-31'
 ORDER BY emp_no asc;
 ```
 
-File: Data/retirement_titles.csv
+Saved File: Data/retirement_titles.csv
 
 <insert 1retirement_title.png>
 
 Summary: Creates a list of employees with the titles and dates in that position. Duplicates are created for employees that have been
 in more than one title.
 
-2. A query is written and executed to create a Unique Titles table that contains the employee number, first and last name, and most recent title.
+#### 2. A query is written and executed to create a Unique Titles table that contains the employee number, first and last name, and most recent title.
 
 ```
 -- Use Distinct with Order by to remove duplicate rows
@@ -56,7 +56,7 @@ ORDER BY r.emp_no asc,
 r.title desc;
 ```
 
-File: Data/unique_titles.csv
+Saved File: Data/unique_titles.csv
 
 <insert 2unique_titles.png>
 
@@ -74,7 +74,7 @@ GROUP BY title
 ORDER BY count(emp_no) desc;
 ```
 
-File: Data/retiring_titles.csv
+Saved File: Data/retiring_titles.csv
 
 <insert 3retiring_titles.png>
 
@@ -102,7 +102,7 @@ AND e.birth_date BETWEEN '1965-01-01' AND '1965-12-31'
 ORDER BY emp_no asc;
 ```
 
-File: Data/mentorship_elibibility.csv
+Saved File: Data/mentorship_elibibility.csv
 
 <insert 4mentorship.png>
 
@@ -115,11 +115,10 @@ Summary: Identifies employee born in 1965, at least 10 years younger than those 
 
 ### Additional Query 1
 
-- What are the number of employees retiring by department.
-
---SUMMARY 1 Number of Employees to leave by Department
+#### 1. What are the total number of employees retiring by department.
 
 ```
+--SUMMARY 1 Number of Employees to leave by Department
 SELECT DISTINCT ON (emp_no) r.emp_no,
 r.first_name,
 r.last_name,
@@ -147,11 +146,10 @@ Summary: The majority of employees retiring are in the Development (27%), Produc
 
 ### Additional Query 2
 
-- Excluding the employees retiring, what's the average number of years that employees are in their current title.
-
---Summary 2 Average Time in Current Position EXCLUDING RETIRING STAFF
+#### 2. Excluding employees retiring, what's the average number of years that employees are in their current title.
 
 ```
+--Summary 2 Average Time in Current Position EXCLUDING RETIRING STAFF
 --Create a csv file of employees born after 1955 and their titles
 Select e.emp_no
 ,e.first_name
