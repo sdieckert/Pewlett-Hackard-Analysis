@@ -17,7 +17,7 @@ This assignment consists of two technical analysis deliverables and a written re
 
 ### Deliverable 1: The Number of Retiring Employees by Title
 
-#### 1. Query to Create Retirement Titles for employees who are born between January 1, 1952 and December 31, 1955.
+#### 1. Create table of Retirement Titles for employees who are born between January 1, 1952 and December 31, 1955.
 
 ```
 --Create a csv file of employees born from 1952-1955 and their titles
@@ -60,9 +60,9 @@ Saved File: Data/unique_titles.csv
 
 <insert 2unique_titles.png>
 
-Summary: Using Distinct On allows to remove duplicate rows.
+Summary: Using Distinct On allows for removal of duplicate rows.
 
-3. A query is written and executed to create a Retiring Titles table that contains the number of titles filled by employees who are retiring
+#### 3. A query is written and executed to create a Retiring Titles table that contains the number of titles filled by employees who are retiring
 
 ```
 --Create A Retiring Titles Table
@@ -82,10 +82,10 @@ Summary: Groups and counts the number of employees by title. Senior Engineer and
 
 ### Deliverable 2: The Employees Eligible for the Mentorship Program
 
-1. A query is written and executed to create a Mentorship Eligibility table for current employees who were born between January 1, 1965 and December 31, 1965.
+#### 1. A query is written and executed to create a Mentorship Eligibility table for current employees who were born between January 1, 1965 and December 31, 1965.
 
 ```
---Create a table for Mentorsip Eligibility
+--Create a table for Mentorship Eligibility
 Select DISTINCT ON (e.emp_no) e.emp_no
 ,e.first_name
 ,e.last_name
@@ -106,12 +106,12 @@ Saved File: Data/mentorship_elibibility.csv
 
 <insert 4mentorship.png>
 
-Summary: Identifies employee born in 1965, at least 10 years younger than those retiring, that are eligible to be a part of a mentor program and replace retiring employees.
+Summary: Identifies employees born in 1965, at least 10-13 years younger than those retiring, that are eligible to be a part of a mentor program and replace retiring employees.
 
 
 ## Summary
 - Overall, there are 72,458 possible employees that the company needs to prepare for retiring. The majority of titles that are retiring are Senior Engineer at 36% and Senior Staff at 34%.
-- Looking at the number of employees that are eligible for a mentorship, having been born in 1965 and 10-15 years younger, there's enough employees retiring that would be able to mentor this upcoming group.
+- Looking at the number of employees that are eligible for a mentorship, having been born in 1965 and 10-13 years younger, there's enough employees retiring that would be able to mentor this upcoming group.
 
 ### Additional Query 1
 
