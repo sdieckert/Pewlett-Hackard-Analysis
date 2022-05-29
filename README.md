@@ -43,6 +43,7 @@ in more than one title.
 
 2. A query is written and executed to create a Unique Titles table that contains the employee number, first and last name, and most recent title.
 
+```
 -- Use Distinct with Order by to remove duplicate rows
 SELECT DISTINCT ON (emp_no) r.emp_no,
 r.first_name,
@@ -53,6 +54,7 @@ FROM retirement_titles as r
 WHERE (r.to_date = '9999-01-01')
 ORDER BY r.emp_no asc,
 r.title desc;
+```
 
 File: Data/unique_titles.csv
 
@@ -62,6 +64,7 @@ Summary: Using Distinct On allows to remove duplicate rows.
 
 3. A query is written and executed to create a Retiring Titles table that contains the number of titles filled by employees who are retiring
 
+```
 --Create A Retiring Titles Table
 SELECT count(emp_no),
 title
@@ -69,6 +72,7 @@ INTO retiring_titles
 FROM unique_titles
 GROUP BY title
 ORDER BY count(emp_no) desc;
+```
 
 File: Data/retiring_titles.csv
 
@@ -80,6 +84,7 @@ Summary: Groups and counts the number of employees by title. Senior Engineer and
 
 1. A query is written and executed to create a Mentorship Eligibility table for current employees who were born between January 1, 1965 and December 31, 1965.
 
+```
 --Create a table for Mentorsip Eligibility
 Select DISTINCT ON (e.emp_no) e.emp_no
 ,e.first_name
@@ -95,6 +100,7 @@ INNER JOIN titles AS et ON e.emp_no=et.emp_no
 WHERE (de.to_date = '9999-01-01')
 AND e.birth_date BETWEEN '1965-01-01' AND '1965-12-31'
 ORDER BY emp_no asc;
+```
 
 File: Data/mentorship_elibibility.csv
 
@@ -112,6 +118,8 @@ Summary: Identifies employee born in 1965, at least 10 years younger than those 
 - What are the number of employees retiring by department.
 
 --SUMMARY 1 Number of Employees to leave by Department
+
+```
 SELECT DISTINCT ON (emp_no) r.emp_no,
 r.first_name,
 r.last_name,
@@ -131,6 +139,7 @@ SELECT dept_name
 FROM unique_titles_dept
 GROUP BY dept_name
 ORDER BY count(emp_no)desc;
+```
 
 <insert 5retire_department.png>
 
@@ -142,6 +151,7 @@ Summary: The majority of employees retiring are in the Development (27%), Produc
 
 --Summary 2 Average Time in Current Position EXCLUDING RETIRING STAFF
 
+```
 --Create a csv file of employees born after 1955 and their titles
 Select e.emp_no
 ,e.first_name
@@ -183,6 +193,7 @@ FROM non_retirement_unique_titles
 GROUP BY dept_name, title
 ORDER BY Dept_name ASC,
 count(emp_no) DESC;
+```
 
 <insert 6aveargeyears>
 
