@@ -19,7 +19,7 @@ This assignment consists of two technical analysis deliverables and a written re
 
 1. Query to Create Retirement Titles for employees who are born between January 1, 1952 and December 31, 1955.
 
-'''
+```
 --Create a csv file of employees born from 1952-1955 and their titles
 Select e.emp_no
 ,e.first_name
@@ -32,7 +32,7 @@ FROM employees as e
 INNER JOIN titles as et ON e.emp_no=et.emp_no
 WHERE e.birth_date BETWEEN '1952-01-01' AND '1955-12-31'
 ORDER BY emp_no asc;
-'''
+```
 
 File: Data/retirement_titles.csv
 
