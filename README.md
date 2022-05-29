@@ -36,7 +36,7 @@ ORDER BY emp_no asc;
 
 Saved File: Data/retirement_titles.csv
 
-<insert 1retirement_title.png>
+![1retirement_titles](https://user-images.githubusercontent.com/87085239/170894616-e461a0d0-baf2-43ad-916d-fa149ada3012.png)
 
 Summary: Creates a list of employees with the titles and dates in that position. Duplicates are created for employees that have been
 in more than one title.
@@ -58,7 +58,7 @@ r.title desc;
 
 Saved File: Data/unique_titles.csv
 
-<insert 2unique_titles.png>
+![2unique_titles](https://user-images.githubusercontent.com/87085239/170894625-40450be8-1d6b-47ff-86c3-1b8b6b6f5721.png)
 
 Summary: Using Distinct On allows for removal of duplicate rows.
 
@@ -76,7 +76,7 @@ ORDER BY count(emp_no) desc;
 
 Saved File: Data/retiring_titles.csv
 
-<insert 3retiring_titles.png>
+![3retiring_titles](https://user-images.githubusercontent.com/87085239/170894644-d677fbf0-7aab-4495-a87e-9a4e4604590c.png)
 
 Summary: Groups and counts the number of employees by title. Senior Engineer and Senior Staff have the highest number of employees retiring.
 
@@ -104,7 +104,7 @@ ORDER BY emp_no asc;
 
 Saved File: Data/mentorship_elibibility.csv
 
-<insert 4mentorship.png>
+![4mentorship](https://user-images.githubusercontent.com/87085239/170894653-0588313d-8c7a-4b17-93e7-9cc146955d6b.png)
 
 Summary: Identifies employees born in 1965, at least 10-13 years younger than those retiring, that are eligible to be a part of a mentor program and replace retiring employees.
 
@@ -140,7 +140,7 @@ GROUP BY dept_name
 ORDER BY count(emp_no)desc;
 ```
 
-<insert 5retire_department.png>
+![5retire_department](https://user-images.githubusercontent.com/87085239/170894670-06b3381b-b88b-4c74-9d78-1960e3701c01.png)
 
 Summary: The majority of employees retiring are in the Development (27%), Production (25%), and Sales (16%) departments. Management would do best to apply efforts to hiring for these three departments to replace the loss expected.
 
@@ -193,6 +193,6 @@ ORDER BY Dept_name ASC,
 count(emp_no) DESC;
 ```
 
-<insert 6aveargeyears>
+![6averageyears](https://user-images.githubusercontent.com/87085239/170894682-7afdc8ae-be6f-46fa-b7a4-8e7a958f77e0.png)
 
 Summary: The average and median number of years for staff in their current titles, across all departments, is on average between 24-33 years. The more senior positions have the highest average. Although this may indicate employee satisfaction and employees remaining with the company for the duration of their careers, it could also indicate the companies lack of recruitment, outdated processes due to less influence of new employee change, and dissatisfaction among staff with the relative flat hierarchy and opportunities for promotions. Since management is addressing the high number of retiring staff, they should look at promoting staff to new positions to diversity tenure by title.
